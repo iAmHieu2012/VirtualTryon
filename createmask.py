@@ -2,15 +2,15 @@ import cv2
 import numpy as np
 
 # load image with alpha channel
-img = cv2.imread(r"C:\Users\iAmHieu\Desktop\Virtual Try-on\VITON-HD\5.jpg")
+img = cv2.imread(r"5.jpg")
 
 # convert to HSV
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
 # create mask for shirt in hsv
 # specify lower and upper ranges for h,s,v colors of shirt
-lower = (0,30,120)
-upper = (30,70,160)
+lower = (0,0,0)
+upper = (200,250,200)
 mask = cv2.inRange(hsv, lower, upper)
 mask = cv2.merge([mask,mask,mask])
 
