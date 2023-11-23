@@ -10,7 +10,7 @@ hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 # create mask for shirt in hsv
 # specify lower and upper ranges for h,s,v colors of shirt
 lower = (0,0,0)
-upper = (200,250,200)
+upper = (200,255,245)
 mask = cv2.inRange(hsv, lower, upper)
 mask = cv2.merge([mask,mask,mask])
 
