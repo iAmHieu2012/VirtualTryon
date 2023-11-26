@@ -1,0 +1,51 @@
+Clone Repository
+```
+git clone https://github.com/iAmHieu2012/VirtualTryon.git
+cd .\VirtualTryon
+```
+Nói chung là nên cd về folder chứa file .-.
+
+%%------------------------------
+
+Tạo môi trường
+```
+conda create -y -n [ENV] python=3.8
+conda activate [ENV]
+conda install -y pytorch=[>=1.6.0] torchvision cudatoolkit=[>=9.2] -c pytorch
+pip install opencv-python torchgeometry
+```
+nếu khi chạy code báo không có numpy thì chạy đoạn code sau trên terminal
+```
+pip install numpy
+```
+
+%%------------------------------
+
+Sử dụng AI tạo mask
+
+cd tới folder Masking
+
+```
+cd .\Tools\Masking
+```
+
+cài requirements
+```
+pip install -r requirements.txt
+```
+'
+python process.py --image '<Chỗ này là file path>'
+'
+ví dụ
+'
+python process.py --image 'input/03615_00.jpg'
+'
+
+%%------------------------------
+
+Sử dụng code của (createmask.py)
+cd về Folder VirtualTryon rồi chạy
+
+```
+python createmask.py
+```
